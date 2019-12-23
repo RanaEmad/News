@@ -25,4 +25,11 @@
         <item name="android:textSize">@dimen/text_size</item>
     </style>
 
+    <style name="listview">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:drawSelectorOnTop">true</item>
+    </style>
+
 </resources>
