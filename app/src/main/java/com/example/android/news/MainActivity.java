@@ -69,4 +69,28 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         return null;
     }
 
+    private class NewsAsyncTask extends AsyncTask<String,Void,List<News>>{
+        @Override
+        protected List<News> doInBackground(String... urls){
+            if (urls.length < 1 || urls[0] == null) {
+                return null;
+            }
+
+            List<News> result = QueryUtils.fetchNewsData(urls[0]);
+            return result;
+        }
+
+        @Override
+        protected void onPostExecute(List<News> data){
+            adapter.clear();
+            if(data !=null && !data.isEmpty()){
+                adapter.addAll(data);
+            }
+        }
+
+    }//end NewsAsyncTask
+
+
+
+
 }
