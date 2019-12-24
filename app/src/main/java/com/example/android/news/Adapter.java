@@ -32,7 +32,12 @@ public class Adapter extends ArrayAdapter<News> {
         sectionView.setText(currentNews.getSection());
 
         TextView authorView= convertView.findViewById(R.id.author);
-        authorView.setText(currentNews.getAuthor());
+        if("".equals(currentNews.getAuthor())){
+            authorView.setVisibility(View.GONE);
+        }
+        else{
+            authorView.setText(currentNews.getAuthor());
+        }
 
         TextView datePublishedView= convertView.findViewById(R.id.datePublished);
         datePublishedView.setText(currentNews.getDatePublished());
