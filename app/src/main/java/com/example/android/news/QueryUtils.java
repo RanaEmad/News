@@ -100,6 +100,7 @@ public final class QueryUtils {
                 inputStream.close();
             }
         }
+        System.out.println(jsonResponse);
         return jsonResponse;
     }
 
@@ -147,9 +148,7 @@ public final class QueryUtils {
 
                 JSONObject currentNews = resultsArray.getJSONObject(i);
 
-//                JSONArray tagsArray = currentNews.getJSONArray("tags");
-//                JSONObject currentTagsObject = tagsArray.getJSONObject(0);
-                News newsObj = new News(currentNews.getString("webTitle"), currentNews.getString("sectionName"), currentNews.getString("author"), currentNews.getString("webPublicationDate"), currentNews.getString("webUrl"));
+                News newsObj = new News(currentNews.getString("webTitle"), currentNews.getString("sectionName"), "", currentNews.getString("webPublicationDate"), currentNews.getString("webUrl"));
 
                 news.add(newsObj);
             }
