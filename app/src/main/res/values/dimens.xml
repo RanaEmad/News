@@ -2,4 +2,6 @@
 <resources>
     <dimen name="text_size">20sp</dimen>
     <dimen name="margin">10dp</dimen>
+    <dimen name="smaller_text_size">16sp</dimen>
+    <dimen name="date_text_size">12sp</dimen>
 </resources>

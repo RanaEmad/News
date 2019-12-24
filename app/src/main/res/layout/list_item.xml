@@ -8,15 +8,15 @@
     android:id="@+id/title"
    />
     <TextView
-        style="@style/item"
+        style="@style/section"
         android:id="@+id/section"
         />
     <TextView
-        style="@style/item"
+        style="@style/author"
         android:id="@+id/author"
         />
     <TextView
-        style="@style/item"
+        style="@style/date"
         android:id="@+id/datePublished"
         />
 
